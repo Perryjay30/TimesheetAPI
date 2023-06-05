@@ -189,7 +189,8 @@ public class TimesheetAPIServiceImpl implements  TimesheetAPIService {
 
     private void findAdmin(String userRole) {
         managerRepository.findUserByRole(userRole)
-                .orElseThrow(() -> new RuntimeException("Admin not found"));
+                .orElseThrow(() -> new RuntimeException("Admin not found, You're probably not " +
+                        "inputting the word properly...It should be - 'Admin'"));
     }
 
 
